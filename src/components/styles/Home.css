@@ -1,0 +1,72 @@
+.app {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav { 
+    display: flex !important; 
+  }
+  .mobile-menu-btn { 
+    display: none !important; 
+  }
+  .hero-grid { 
+    grid-template-columns: 1fr 1fr !important; 
+  }
+  .features-grid { 
+    grid-template-columns: repeat(3, 1fr) !important; 
+  }
+  .two-col-grid { 
+    grid-template-columns: 1fr 1fr !important; 
+  }
+  .stats-grid { 
+    grid-template-columns: repeat(2, 1fr) !important; 
+  }
+  .blog-grid { 
+    grid-template-columns: repeat(3, 1fr) !important; 
+  }
+  .footer-grid { 
+    grid-template-columns: repeat(4, 1fr) !important; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title { 
+    font-size: 4rem !important; 
+  }
+  .section-title { 
+    font-size: 3rem !important; 
+  }
+}
+
+.nav-link:hover { 
+  color: #10b981; 
+}
+
+.mobile-nav-link:hover { 
+  color: #10b981; 
+  background-color: #f9fafb; 
+}
+
+.primary-button:hover { 
+  background-color: #059669; 
+  transform: translateY(-2px); 
+}
+
+.login-button:hover { 
+  background-color: #059669; 
+  transform: translateY(-2px); 
+}
+
+.mobile-menu-btn:hover { 
+  background-color: #f3f4f6; 
+}
+
+.blog-link:hover { 
+  color: #059669; 
+}
+
+.footer-link:hover { 
+  color: #10b981; 
+}
