@@ -2,14 +2,107 @@
   min-height: 100vh;
   background-color: #f9fafb;
   font-family: system-ui, -apple-system, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-@media (min-width: 768px) {
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Base button styles */
+.primary-button {
+  white-space: nowrap;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Section spacing */
+section {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Base styles for all devices */
+.hero-grid,
+.features-grid,
+.two-col-grid,
+.stats-grid,
+.blog-grid,
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Mobile-first styles */
+.hero-grid { 
+  grid-template-columns: 1fr; 
+}
+
+.features-grid { 
+  grid-template-columns: 1fr; 
+}
+
+.two-col-grid { 
+  grid-template-columns: 1fr; 
+}
+
+.stats-grid { 
+  grid-template-columns: 1fr; 
+}
+
+.blog-grid { 
+  grid-template-columns: 1fr; 
+}
+
+/* Tablet and larger */
+@media (min-width: 640px) {
+  .features-grid,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop and larger */
+@media (min-width: 1024px) {
   .desktop-nav { 
     display: flex !important; 
   }
   .mobile-menu-btn { 
     display: none !important; 
+  }
+  
+  .hero-grid { 
+    grid-template-columns: 1fr 1fr !important;
+    align-items: center;
+  }
+  
+  .features-grid { 
+    grid-template-columns: repeat(3, 1fr) !important; 
+  }
+  
+  .two-col-grid { 
+    grid-template-columns: 1fr 1fr !important;
+    align-items: center;
+  }
+  
+  .blog-grid { 
+    grid-template-columns: repeat(3, 1fr) !important; 
+  }
+  
+  .footer-grid { 
+    grid-template-columns: repeat(4, 1fr) !important; 
   }
   .hero-grid { 
     grid-template-columns: 1fr 1fr !important; 
@@ -33,10 +126,25 @@
 
 @media (min-width: 1024px) {
   .hero-title { 
-    font-size: 4rem !important; 
-  }
-  .section-title { 
     font-size: 3rem !important; 
+    line-height: 1.2;
+  }
+  
+  .section-title { 
+    font-size: 2.5rem !important;
+    line-height: 1.2;
+  }
+  
+  /* Ensure content doesn't get too wide on large screens */
+  .section-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Better spacing for larger screens */
+  section {
+    padding: 6rem 0;
   }
 }
 

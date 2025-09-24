@@ -6,22 +6,36 @@ const Home: React.FC = () => {
   const styles = {
     hero: {
       backgroundColor: 'white',
-      padding: '5rem 1rem',
+      padding: '3rem 1rem',
+      '@media (min-width: 768px)': {
+        padding: '5rem 1rem',
+      },
     },
     heroContent: {
       display: 'grid',
       gridTemplateColumns: '1fr',
-      gap: '3rem',
+      gap: '2rem',
       alignItems: 'center',
       maxWidth: '1280px',
       margin: '0 auto',
+      padding: '0 1rem',
+      '@media (min-width: 768px)': {
+        gap: '3rem',
+        padding: '0 2rem',
+      },
     },
     heroTitle: {
-      fontSize: '3rem',
+      fontSize: '2.25rem',
       fontWeight: 'bold',
       color: '#111827',
       marginBottom: '1rem',
       lineHeight: '1.2',
+      '@media (min-width: 640px)': {
+        fontSize: '2.5rem',
+      },
+      '@media (min-width: 1024px)': {
+        fontSize: '3rem',
+      },
     },
     heroSubtitle: {
       fontSize: '1.125rem',
@@ -38,9 +52,12 @@ const Home: React.FC = () => {
       borderRadius: '8px',
       border: 'none',
       fontSize: '1.125rem',
-      fontWeight: '500',
+      fontWeight: 500,
       cursor: 'pointer',
       transition: 'all 0.3s',
+      width: 'auto',
+      display: 'inline-block',
+      textAlign: 'center' as const,
     },
     pagination: {
       display: 'flex',
@@ -63,7 +80,10 @@ const Home: React.FC = () => {
       margin: '0 auto',
     },
     section: {
-      padding: '5rem 1rem',
+      padding: '3rem 1rem',
+      '@media (min-width: 768px)': {
+        padding: '5rem 1rem',
+      },
     },
     sectionWhite: {
       backgroundColor: 'white',
@@ -119,8 +139,12 @@ const Home: React.FC = () => {
     twoColumnGrid: {
       display: 'grid',
       gridTemplateColumns: '1fr',
-      gap: '3rem',
+      gap: '2rem',
       alignItems: 'center',
+      '@media (min-width: 768px)': {
+        gridTemplateColumns: '1fr 1fr',
+        gap: '3rem',
+      },
     },
     textContent: {
       maxWidth: '600px',
@@ -207,14 +231,27 @@ const Home: React.FC = () => {
     },
     aboutStrip: {
       backgroundColor: '#F5F7FA',
-      padding: '3rem 1rem',
+      padding: '2rem 1rem',
       borderRadius: '8px',
-      marginBottom: '4rem',
+      margin: '0 -1rem 2rem',
+      width: 'calc(100% + 2rem)',
+      '@media (min-width: 768px)': {
+        padding: '3rem 2rem',
+        margin: '0 0 4rem',
+        width: '100%',
+      },
     },
     statsStrip: {
       backgroundColor: '#F5F7FA',
-      padding: '3rem 1rem',
+      padding: '2rem 1rem',
       borderRadius: '8px',
+      margin: '0 -1rem',
+      width: 'calc(100% + 2rem)',
+      '@media (min-width: 768px)': {
+        padding: '3rem 2rem',
+        margin: '0',
+        width: '100%',
+      },
     },
   };
 
