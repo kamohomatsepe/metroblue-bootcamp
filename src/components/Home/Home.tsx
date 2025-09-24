@@ -178,7 +178,7 @@ const Home: React.FC = () => {
       textAlign: 'center' as const,
     },
     statNumber: {
-      fontSize: '2rem',
+      fontSize: '1rem',
       fontWeight: 'bold',
       color: '#000000',
       display: 'flex',
@@ -231,12 +231,12 @@ const Home: React.FC = () => {
     },
     aboutStrip: {
       backgroundColor: '#F5F7FA',
-      padding: '2rem 1rem',
+      padding: '1rem 0rem',
       borderRadius: '8px',
       margin: '0 -1rem 2rem',
       width: 'calc(100% + 2rem)',
       '@media (min-width: 768px)': {
-        padding: '3rem 2rem',
+        padding: '3rem 1rem',
         margin: '0 0 4rem',
         width: '100%',
       },
