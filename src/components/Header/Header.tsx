@@ -52,7 +52,7 @@ const Header: React.FC = () => {
       borderBottomColor: '#10b981',
     },
     loginButton: {
-      backgroundColor: '#10b981',
+      backgroundColor: '#4CAF4F',
       color: 'white',
       padding: '0.75rem 2rem',
       borderRadius: '8px',

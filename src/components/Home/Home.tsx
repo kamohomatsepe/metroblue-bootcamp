@@ -5,7 +5,7 @@ import '../styles/Home.css';
 const Home: React.FC = () => {
   const styles = {
     hero: {
-      backgroundColor: '#f9fafb',
+      backgroundColor: 'white',
       padding: '5rem 1rem',
     },
     heroContent: {
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       color: '#10b981',
     },
     primaryButton: {
-      backgroundColor: '#10b981',
+      backgroundColor: '#4CAF4F',
       color: 'white',
       padding: '0.75rem 2rem',
       borderRadius: '8px',
@@ -69,7 +69,7 @@ const Home: React.FC = () => {
       backgroundColor: 'white',
     },
     sectionGray: {
-      backgroundColor: '#f9fafb',
+      backgroundColor: 'white',
     },
     sectionContent: {
       margin: '0 auto',
@@ -129,6 +129,7 @@ const Home: React.FC = () => {
       listStyle: 'none',
       padding: 0,
       marginBottom: '2rem',
+      color: '#374151',
     },
     listItem: {
       display: 'flex',
@@ -155,7 +156,7 @@ const Home: React.FC = () => {
     statNumber: {
       fontSize: '2rem',
       fontWeight: 'bold',
-      color: '#10b981',
+      color: '#000000',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -203,6 +204,17 @@ const Home: React.FC = () => {
       maxWidth: '1024px',
       margin: '0 auto',
       textAlign: 'center' as const,
+    },
+    aboutStrip: {
+      backgroundColor: '#F5F7FA',
+      padding: '3rem 1rem',
+      borderRadius: '8px',
+      marginBottom: '4rem',
+    },
+    statsStrip: {
+      backgroundColor: '#F5F7FA',
+      padding: '3rem 1rem',
+      borderRadius: '8px',
     },
   };
 
@@ -336,7 +348,8 @@ const Home: React.FC = () => {
       {/* Stats Section */}
       <section style={{...styles.section, ...styles.sectionWhite}}>
         <div style={styles.sectionContent}>
-          <div className="two-col-grid" style={styles.twoColumnGrid}>
+          <div style={styles.statsStrip}>
+            <div className="two-col-grid" style={styles.twoColumnGrid}>
             <div style={styles.textContent}>
               <h2 style={{...styles.sectionTitle, textAlign: 'left', fontSize: '2.25rem'}}>
                 Helping a local{' '}
@@ -375,6 +388,7 @@ const Home: React.FC = () => {
                 </div>
                 <p style={styles.statLabel}>Payments</p>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -415,16 +429,18 @@ const Home: React.FC = () => {
       {/* About & Blog Section */}
       <section style={{...styles.section, ...styles.sectionWhite}}>
         <div style={styles.sectionContent}>
-          <div style={{textAlign: 'center', marginBottom: '4rem'}}>
-            <h2 style={styles.sectionTitle}>
-              About MetroBlue
-            </h2>
-            <p style={styles.aboutText}>
-              MetroBlue is a creative tech brand dedicated to empowering individuals with the skills to thrive in today's digital world. We specialize in practical, 
-              hands-on training programs such as our UI/UX Bootcamp, designed to bridge the gap between creativity and technology. With a focus on design 
-              thinking, innovation, and real-world application, MetroBlue helps aspiring designers and tech enthusiasts build career-ready skills while working on 
-              projects that matter. Our mission is simple — to inspire, train, and launch the next generation of digital creators.
-            </p>
+          <div style={styles.aboutStrip}>
+            <div style={{textAlign: 'center'}}>
+              <h2 style={styles.sectionTitle}>
+                About MetroBlue
+              </h2>
+              <p style={styles.aboutText}>
+                MetroBlue is a creative tech brand dedicated to empowering individuals with the skills to thrive in today's digital world. We specialize in practical, 
+                hands-on training programs such as our UI/UX Bootcamp, designed to bridge the gap between creativity and technology. With a focus on design 
+                thinking, innovation, and real-world application, MetroBlue helps aspiring designers and tech enthusiasts build career-ready skills while working on 
+                projects that matter. Our mission is simple — to inspire, train, and launch the next generation of digital creators.
+              </p>
+            </div>
           </div>
 
           <div style={{textAlign: 'center', marginBottom: '3rem'}}>
@@ -470,14 +486,16 @@ const Home: React.FC = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section style={{...styles.section, ...styles.sectionGray}}>
-        <div style={{...styles.sectionContent, textAlign: 'center'}}>
-          <h2 style={{...styles.sectionTitle, marginBottom: '2rem'}}>
-            Don't Miss Out!!!
-          </h2>
-          <button style={{...styles.primaryButton, display: 'inline-flex', alignItems: 'center', gap: '0.5rem'}} className="primary-button">
-            Get Started <ArrowRight size={20} />
-          </button>
+      <section style={{...styles.section, ...styles.sectionWhite, padding: 0}}>
+        <div style={styles.sectionContent}>
+          <div style={{...styles.statsStrip, textAlign: 'center', margin: 0}}>
+            <h2 style={{...styles.sectionTitle, marginBottom: '2rem'}}>
+              Don't Miss Out!!!
+            </h2>
+            <button style={{...styles.primaryButton, display: 'inline-flex', alignItems: 'center', gap: '0.5rem'}} className="primary-button">
+              Get Started <ArrowRight size={20} />
+            </button>
+          </div>
         </div>
       </section>
     </main>
