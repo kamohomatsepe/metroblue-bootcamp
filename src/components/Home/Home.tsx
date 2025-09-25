@@ -74,10 +74,10 @@ const Home: React.FC = () => {
       backgroundColor: '#10b981',
     },
     heroImage: {
-      maxWidth: '100%',
-      height: 'auto',
-      display: 'block',
-      margin: '0 auto',
+      // maxWidth: '100%',
+      // height: 'auto',
+      // display: 'block',
+      // margin: '0 auto',
     },
     section: {
       padding: '3rem 1rem',
@@ -93,6 +93,7 @@ const Home: React.FC = () => {
     },
     sectionContent: {
       margin: '0 auto',
+      // padding:'20px',
     },
     sectionTitle: {
       fontSize: '2.5rem',
@@ -148,6 +149,7 @@ const Home: React.FC = () => {
     },
     textContent: {
       maxWidth: '600px',
+      padding: '30px',
     },
     list: {
       listStyle: 'none',
@@ -227,7 +229,9 @@ const Home: React.FC = () => {
       lineHeight: '1.6',
       maxWidth: '1024px',
       margin: '0 auto',
-      textAlign: 'center' as const,
+      // textAlign: 'center' as const,
+      textAlign: 'justify' as const,
+      padding: '25px',
     },
     aboutStrip: {
       backgroundColor: '#F5F7FA',
