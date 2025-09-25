@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, BarChart3, Smartphone, Calendar, CreditCard, ArrowRight } from 'lucide-react';
+import { Users, BarChart3, Smartphone, ArrowRight } from 'lucide-react';
 import '../styles/Home.css';
 
 const Home: React.FC = () => {
@@ -67,17 +67,17 @@ const Home: React.FC = () => {
     dot: {
       width: '12px',
       height: '12px',
-      borderRadius: '50%',
       backgroundColor: '#d1d5db',
     },
     activeDot: {
       backgroundColor: '#10b981',
     },
     heroImage: {
-      // maxWidth: '100%',
-      // height: 'auto',
-      // display: 'block',
-      // margin: '0 auto',
+      maxWidth: '100%',
+      maxHeight: '400px',
+      height: 'auto',
+      display: 'block',
+      margin: '0 auto',
     },
     section: {
       padding: '3rem 1rem',
@@ -391,45 +391,45 @@ const Home: React.FC = () => {
         <div style={styles.sectionContent}>
           <div style={styles.statsStrip}>
             <div className="two-col-grid" style={styles.twoColumnGrid}>
-            <div style={styles.textContent}>
-              <h2 style={{...styles.sectionTitle, textAlign: 'left', fontSize: '2.25rem'}}>
-                Helping a local{' '}
-                <span style={styles.greenText}>business reinvent itself</span>
-              </h2>
-              <p style={{...styles.featureText, fontSize: '1.125rem'}}>
-                We reached here with our hard work and dedication
-              </p>
-            </div>
-            <div className="stats-grid" style={styles.statsGrid}>
-              <div style={styles.statCard}>
-                <div style={styles.statNumber}>
-                  <Users size={24} color="#10b981" style={{marginRight: '0.5rem'}} />
-                  2,245,341
-                </div>
-                <p style={styles.statLabel}>Members</p>
+              <div style={styles.textContent}>
+                <h2 style={{...styles.sectionTitle, textAlign: 'left', fontSize: '2.25rem'}}>
+                  Helping a local{' '}
+                  <span style={styles.greenText}>business reinvent itself</span>
+                </h2>
+                <p style={{...styles.featureText, fontSize: '1.125rem'}}>
+                  We reached here with our hard work and dedication
+                </p>
               </div>
-              <div style={styles.statCard}>
-                <div style={styles.statNumber}>
-                  <Users size={24} color="#10b981" style={{marginRight: '0.5rem'}} />
-                  46,328
+              <div className="stats-grid" style={styles.statsGrid}>
+                <div style={styles.statCard}>
+                  <div style={styles.statNumber}>
+                    <img src="/members.png" alt="Members" style={{width: '36px', height: '36px', marginRight: '0.75rem'}} />
+                    2,245,341
+                  </div>
+                  <p style={styles.statLabel}>Members</p>
                 </div>
-                <p style={styles.statLabel}>Clubs</p>
-              </div>
-              <div style={styles.statCard}>
-                <div style={styles.statNumber}>
-                  <Calendar size={24} color="#10b981" style={{marginRight: '0.5rem'}} />
-                  828,867
+                <div style={styles.statCard}>
+                  <div style={styles.statNumber}>
+                    <img src="/clubs.png" alt="Clubs" style={{width: '36px', height: '36px', marginRight: '0.75rem'}} />
+                    46,328
+                  </div>
+                  <p style={styles.statLabel}>Clubs</p>
                 </div>
-                <p style={styles.statLabel}>Event Bookings</p>
-              </div>
-              <div style={styles.statCard}>
-                <div style={styles.statNumber}>
-                  <CreditCard size={24} color="#10b981" style={{marginRight: '0.5rem'}} />
-                  1,926,436
+                <div style={styles.statCard}>
+                  <div style={styles.statNumber}>
+                    <img src="/event-bookings.png" alt="Event Bookings" style={{width: '36px', height: '36px', marginRight: '0.75rem'}} />
+                    828,867
+                  </div>
+                  <p style={styles.statLabel}>Event Bookings</p>
                 </div>
-                <p style={styles.statLabel}>Payments</p>
+                <div style={styles.statCard}>
+                  <div style={styles.statNumber}>
+                    <img src="/payments.png" alt="Payments" style={{width: '36px', height: '36px', marginRight: '0.75rem'}} />
+                    1,926,436
+                  </div>
+                  <p style={styles.statLabel}>Payments</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
